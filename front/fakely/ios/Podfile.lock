@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - receive_sharing_intent (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - receive_sharing_intent (from `.symlinks/plugins/receive_sharing_intent/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  receive_sharing_intent:
+    :path: ".symlinks/plugins/receive_sharing_intent/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 446b87ace8a3747a167979213b4aef59a0b5e5fa
+  receive_sharing_intent: 9e3d8d877a1177f1f7bfb47dd08b02f5ca2c1542
+
+PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
+
+COCOAPODS: 1.10.0

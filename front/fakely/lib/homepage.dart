@@ -1,7 +1,6 @@
 import 'package:fakely/cardnews.dart';
 import 'package:fakely/searchbar.dart';
 import "package:flutter/material.dart";
-import "package:fakely/teste.dart";
 
 class HomePage extends StatelessWidget {
   @override
