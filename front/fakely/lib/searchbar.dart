@@ -10,16 +10,20 @@ class _SearchBarState extends State<SearchBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.maxFinite,
+      alignment: Alignment.center,
+      width: double.infinity,
       child: Row(
         children: [
           IconButton(icon: Icon(Icons.search), onPressed: null),
           Expanded(
             child: TextField(
-              onChanged: (s) => setState((){
+              onChanged: (s) => setState(() {
                 this.query = s;
                 print(s);
               }),
+              decoration: InputDecoration(
+                labelText: "Procure sua notícia: ",
+              ),
             ),
           ),
         ],
