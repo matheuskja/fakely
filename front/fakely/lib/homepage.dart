@@ -1,3 +1,4 @@
+import 'package:fakely/searchbar.dart';
 import "package:flutter/material.dart";
 
 class HomePage extends StatelessWidget {
@@ -9,9 +10,12 @@ class HomePage extends StatelessWidget {
           title: Text("Fakely"),
         ),
         body: Container(
-          height: double.infinity,
           width: double.infinity,
-          color: Colors.black,
+          child: Column(
+            children: [
+              SearchBar(),
+            ],
+          ),
         ),
       ),
     );
