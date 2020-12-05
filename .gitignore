@@ -19,3 +19,19 @@ doc/api/
 *.js_
 *.js.deps
 *.js.map
+
+# Avoid committing our databases
+*.csv
+
+
+# flutter create
+.DS_Store
+.vs/
+.idea
+.packages
+.pub/
+build/
+ios/.generated/
+packages
+pubspec.lock
+.flutter-plugins
