@@ -1,12 +1,15 @@
 import 'package:fakely/newspage.dart';
-import 'package:fakely/teste.dart';
+import 'package:fakely/titlecard.dart';
+import 'package:fakely/fakecard.dart';
 import 'package:flutter/material.dart';
+import 'package:fakely/cardtext.dart';
+import 'package:fakely/topicoscard.dart';
 
 class NewsCard extends StatelessWidget {
   String title;
   String text;
   String result = "Fake";
-
+  List<String> topicos = ["Covid", "Vacina"];
   NewsCard(this.title, this.text);
   @override
   Widget build(BuildContext context) {
@@ -21,63 +24,27 @@ class NewsCard extends StatelessWidget {
     }
     return GestureDetector(
       child: Card(
+        margin: EdgeInsets.all(10),
         child: Container(
           width: double.infinity,
           height: 200,
-          color: colText,
+          color: Colors.white,
           child: Column(
             children: [
-              Text(
-                this.title,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 22,
-                  fontStyle: FontStyle.normal,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: "comicsans",
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  TitleCard("Titulo da noticia"),
+                  FakeCard(true),
+                ],
               ),
               Expanded(
-                child: Row(
-                  children: [
-                    Container(
-                      alignment: Alignment.center,
-                      width: 200,
-                      child: SingleChildScrollView(
-                        child: Text(
-                          this.text,
-                          textAlign: TextAlign.left,
-                          // overflow: TextOverflow.ellipsis,
-                          // softWrap: true,
-
-                          style: TextStyle(
-                            fontSize: 14,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      width: 100,
-                      decoration: BoxDecoration(
-                        color: colResult,
-                        borderRadius: BorderRadius.circular(3),
-                        border: Border.all(
-                          width: 2,
-                        ),
-                      ),
-                      child: Text(
-                        this.result,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 20,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+                child: CardText(this.text),
               ),
-              
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: topicos.map((e) => TopicosCard(e)).toList(),
+              )
             ],
           ),
         ),
