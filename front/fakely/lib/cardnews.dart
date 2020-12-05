@@ -1,4 +1,5 @@
 import 'package:fakely/newspage.dart';
+import 'package:fakely/teste.dart';
 import 'package:flutter/material.dart';
 
 class NewsCard extends StatelessWidget {
@@ -10,16 +11,20 @@ class NewsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Color colResult;
+    Color colText;
     if (result == "Fake") {
       colResult = Colors.red;
+      colText = Colors.red[200];
     } else {
       colResult = Colors.green;
+      colText = Colors.green[300];
     }
     return GestureDetector(
       child: Card(
         child: Container(
           width: double.infinity,
-          height: 100,
+          height: 200,
+          color: colText,
           child: Column(
             children: [
               Text(
@@ -36,13 +41,15 @@ class NewsCard extends StatelessWidget {
                 child: Row(
                   children: [
                     Container(
-                      width: 300,
+                      alignment: Alignment.center,
+                      width: 200,
                       child: SingleChildScrollView(
                         child: Text(
                           this.text,
                           textAlign: TextAlign.left,
                           // overflow: TextOverflow.ellipsis,
                           // softWrap: true,
+
                           style: TextStyle(
                             fontSize: 14,
                           ),
@@ -50,7 +57,9 @@ class NewsCard extends StatelessWidget {
                       ),
                     ),
                     Container(
+                      width: 100,
                       decoration: BoxDecoration(
+                        color: colResult,
                         borderRadius: BorderRadius.circular(3),
                         border: Border.all(
                           width: 2,
@@ -60,7 +69,7 @@ class NewsCard extends StatelessWidget {
                         this.result,
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          color: colResult,
+                          color: Colors.black,
                           fontSize: 20,
                         ),
                       ),
@@ -68,6 +77,7 @@ class NewsCard extends StatelessWidget {
                   ],
                 ),
               ),
+              
             ],
           ),
         ),
