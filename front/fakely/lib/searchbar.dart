@@ -10,6 +10,7 @@ class _SearchBarState extends State<SearchBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(bottom: 20, top: 20),
       alignment: Alignment.center,
       width: double.infinity,
       child: Row(

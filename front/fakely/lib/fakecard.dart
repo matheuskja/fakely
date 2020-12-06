@@ -17,6 +17,7 @@ class FakeCard extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
+      margin: EdgeInsets.only(top:7,),
       width: 100,
       height: 30,
       alignment: Alignment.center,
@@ -24,7 +25,7 @@ class FakeCard extends StatelessWidget {
         color: this.color,
         borderRadius: BorderRadius.circular(10),
         border: Border.all(
-          width: 2,
+          width: 0,
         ),
       ),
       child: Text(

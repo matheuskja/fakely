@@ -6,11 +6,16 @@ class TitleCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Text(
-      this._title,
-      style: TextStyle(
-        fontSize: 22,
-        fontWeight: FontWeight.bold,
+    return Container(
+      width: 280,
+      child: Text(
+        this._title,
+        textAlign: TextAlign.center,
+        style: TextStyle(
+          fontSize: 22,
+          fontWeight: FontWeight.bold,
+        ),
+        overflow: TextOverflow.ellipsis,
       ),
     );
   }

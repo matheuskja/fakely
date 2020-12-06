@@ -36,6 +36,7 @@ class _NewsPageState extends State<NewsPage> {
             ],
           ),
         ),
+        body: Image.asset('assets/images/Image.png', scale: 0.8,),
       ),
     );
   }

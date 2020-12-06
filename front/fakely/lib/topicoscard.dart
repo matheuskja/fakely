@@ -9,7 +9,7 @@ class TopicosCard extends StatefulWidget {
 }
 
 class _TopicosCardState extends State<TopicosCard> {
-  bool selected;
+  bool selected = false;
   Color col = Colors.grey;
   @override
   Widget build(BuildContext context) {
@@ -23,9 +23,7 @@ class _TopicosCardState extends State<TopicosCard> {
         decoration: BoxDecoration(
           color: col,
           borderRadius: BorderRadius.circular(10),
-          border: Border.all(
-            width: 2,
-          ),
+          
         ),
         child: Text(
           this.widget._topico,
@@ -37,9 +35,8 @@ class _TopicosCardState extends State<TopicosCard> {
         ),
       ),
       onTap: ()=>setState(() {
-        this.selected = !this.selected;
-        this.col = this.selected ? Colors.purple : Colors.grey;
-        print("ok");
+        this.selected = this.selected ? false : true;
+        this.col = this.selected ? Colors.blueAccent[100] : Colors.grey;
       }),
     );
   }

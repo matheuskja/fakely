@@ -4,6 +4,7 @@ import 'package:fakely/fakecard.dart';
 import 'package:flutter/material.dart';
 import 'package:fakely/cardtext.dart';
 import 'package:fakely/topicoscard.dart';
+import 'package:fakely/imagemcard.dart';
 
 class NewsCard extends StatelessWidget {
   String title;
@@ -24,6 +25,7 @@ class NewsCard extends StatelessWidget {
     }
     return GestureDetector(
       child: Card(
+        clipBehavior: Clip.antiAlias,
         margin: EdgeInsets.all(10),
         child: Container(
           width: double.infinity,
@@ -34,13 +36,16 @@ class NewsCard extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  TitleCard("Titulo da noticia"),
+                  TitleCard(this.title),
                   FakeCard(true),
                 ],
               ),
+
               Expanded(
                 child: CardText(this.text),
               ),
+              // Expanded(child: ImagemCard(),flex: 100000,)
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: topicos.map((e) => TopicosCard(e)).toList(),

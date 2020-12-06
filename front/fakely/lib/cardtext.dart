@@ -19,7 +19,7 @@ class CardText extends StatelessWidget {
           // softWrap: true,
 
           style: TextStyle(
-            fontSize: 14,
+            fontSize: 16,
           ),
         ),
       ),
