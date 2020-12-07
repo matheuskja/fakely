@@ -3,7 +3,6 @@ import "package:flutter/material.dart";
 class ImagemCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Container(
       height: 10,
       width: 10,
@@ -12,7 +11,6 @@ class ImagemCard extends StatelessWidget {
           image: ExactAssetImage('assets/images/Imagem.png'),
         ),
       ),
-      
     );
   }
 }

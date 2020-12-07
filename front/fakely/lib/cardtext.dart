@@ -7,14 +7,13 @@ class CardText extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
-      
       margin: EdgeInsets.all(10),
       alignment: Alignment.center,
       width: double.infinity,
       child: SingleChildScrollView(
         child: Text(
           this._text,
-          textAlign: TextAlign.left,
+          textAlign: TextAlign.justify,
           // overflow: TextOverflow.ellipsis,
           // softWrap: true,
 

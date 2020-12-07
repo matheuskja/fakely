@@ -16,14 +16,12 @@ class _TopicosCardState extends State<TopicosCard> {
     // TODO: implement build
     return GestureDetector(
       child: Container(
+        padding: EdgeInsets.all(5),
         margin: EdgeInsets.only(bottom: 10, left: 10),
-        width: 55,
-        height: 25,
         alignment: Alignment.center,
         decoration: BoxDecoration(
           color: col,
           borderRadius: BorderRadius.circular(10),
-          
         ),
         child: Text(
           this.widget._topico,
@@ -34,7 +32,7 @@ class _TopicosCardState extends State<TopicosCard> {
           ),
         ),
       ),
-      onTap: ()=>setState(() {
+      onTap: () => setState(() {
         this.selected = this.selected ? false : true;
         this.col = this.selected ? Colors.blueAccent[100] : Colors.grey;
       }),

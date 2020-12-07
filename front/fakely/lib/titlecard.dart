@@ -5,7 +5,6 @@ class TitleCard extends StatelessWidget {
   TitleCard(this._title);
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Container(
       width: 280,
       child: Text(

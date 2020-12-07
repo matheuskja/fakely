@@ -1,6 +1,8 @@
 import "package:flutter/material.dart";
 
 class SearchBar extends StatefulWidget {
+  final Function pressedButtonSearch;
+  SearchBar(this.pressedButtonSearch);
   @override
   _SearchBarState createState() => _SearchBarState();
 }
@@ -15,7 +17,9 @@ class _SearchBarState extends State<SearchBar> {
       width: double.infinity,
       child: Row(
         children: [
-          IconButton(icon: Icon(Icons.search), onPressed: null),
+          IconButton(
+              icon: Icon(Icons.search),
+              onPressed: ()=>this.widget.pressedButtonSearch(this.query)),
           Expanded(
             child: TextField(
               onChanged: (s) => setState(() {
@@ -25,6 +29,7 @@ class _SearchBarState extends State<SearchBar> {
               decoration: InputDecoration(
                 labelText: "Procure sua notícia: ",
               ),
+              onSubmitted: this.widget.pressedButtonSearch,
             ),
           ),
         ],

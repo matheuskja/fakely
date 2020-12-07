@@ -15,7 +15,6 @@ class FakeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Container(
       margin: EdgeInsets.only(top:7,),
       width: 100,
