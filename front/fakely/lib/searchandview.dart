@@ -21,7 +21,7 @@ class _SearchViewState extends State<SearchView> {
         ''';
     // TODO: do a query to Sandra's and Felipe's backend
     var results;
-    String permissao = 'AIzaSyAxZagN6_Q6GfqLs6ReQUH3a2TVPbhgqQw';
+    
     var url =
         'https://factchecktools.googleapis.com/v1alpha1/claims:search?languageCode=pt&query=${s}d&key=${credentials.permissao}';
     print(s);
